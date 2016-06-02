@@ -12,7 +12,6 @@ get('/') do
 end
 
 post('/videos') do
-  description = params.fetch('description')
-  @result = @vk.video.search(q: description)
+  @result = @vk.video.search(params)
   slim(:result)
 end

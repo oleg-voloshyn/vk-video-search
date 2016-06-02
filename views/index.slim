@@ -4,4 +4,9 @@ form action='videos' method='post'
   input#q name='q' type='text' /
   label for='hd' HD
   input type='checkbox' name='hd' value=1
+  label for='sort' Sort
+  select name='sort'
+    option value=2 by relevance
+    option value=1 by duration
+    option value=0 by date added
   button type='submit' Search video!

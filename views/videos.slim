@@ -1,0 +1,24 @@
+form action='videos' method='post'
+  input type='hidden' name='count' value=200
+  label for='q' Video
+  input#q name='q' type='text' required=true /
+  label for='hd' HD
+  input type='checkbox' name='hd' value=1
+  label for='sort' Sort
+  select name='sort'
+    option value=2 by relevance
+    option value=1 by duration
+    option value=0 by date added
+  label for='adult' Adult
+  select name='adult'
+    option value=0 enable
+    option value=1 disable
+  label for='filters' Filters
+  select name='filters'
+    option value=''
+    option value='mp4' mp4
+    option value='youtube' youtube
+    option value='vimeo' vimeo
+    option value='short' short
+    option value='long' long
+  button type='submit' Search video!

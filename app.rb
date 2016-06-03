@@ -19,7 +19,13 @@ get('/videos') do
   slim(:videos)
 end
 
+post('/audios') do
+  @audio = @vk.audio.search(params)
+  @audio.shift
+  slim(:audio_result)
+end
+
 post('/videos') do
-  @result = @vk.video.search(params)
-  slim(:result)
+  @video = @vk.video.search(params)
+  slim(:video_result)
 end
